@@ -1,8 +1,10 @@
 const { Telegraf, Markup } = require('telegraf');
 const connectDB = require('./config/db');
 const { getRandomMovie } = require('./services/movieService');
+require('dotenv').config();
 
-const bot = new Telegraf('7709571085:AAE-8AKk9O-j9rZW-PsNOkaBirOViVzMzjw');
+const bot = new Telegraf(process.env.BOT_TOKEN);
+console.log(process.env.BOT_TOKEN);
 
 const mainMenu = Markup.keyboard([
     ['🎬 Get Recommendation', '🔁 Restart Bot']

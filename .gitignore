@@ -2,3 +2,4 @@ node_modules
 testService.js
 testdb.js
 .vscode
+.env
